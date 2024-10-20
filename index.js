@@ -33,6 +33,10 @@ function updateCity(event) {
     "A"
   )}</small></div>
       </div>`;
+
+  if (newTimeZone === current) {
+    newTimeZone = moment.tz.guess();
+  }
 }
 
 let selectCity = document.querySelector("#search-city");
