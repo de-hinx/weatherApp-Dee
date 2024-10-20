@@ -13,7 +13,7 @@ function updateTime() {
 
   let dateParis = newParis.querySelector(".date");
   let timeParis = newParis.querySelector(".time");
-  let parisTime = moment().tz("America/Los_Angeles");
+  let parisTime = moment().tz("Europe/Paris");
 
   dateParis.innerHTML = parisTime.format("MMMM Do YYYY");
   timeParis.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
