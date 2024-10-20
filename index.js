@@ -19,3 +19,21 @@ function updateTime() {
   timeParis.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
 }
 setInterval(updateTime, 1000);
+
+function updateCity(event) {
+  let newTimezone = event.target.value;
+  let cityTime = moment().tz(newTimezone);
+  let cities = document.querySelector(".cities");
+  cities.innerHTML = `<div class="flex">
+        <div class="drop-down">
+          <div class="city">${newTimezone}</div>
+          <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+        </div>
+        <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format(
+    "A"
+  )}</small></div>
+      </div>`;
+}
+
+let selectCity = document.querySelector("#search-city");
+selectCity = addEventListener("change", updateCity);
