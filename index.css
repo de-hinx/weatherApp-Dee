@@ -1,15 +1,16 @@
 .container {
   background-color: white;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 15px;
 }
 body {
   background: #f9f7fe;
+  margin: 25px;
 }
 select {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   font-size: 15px;
