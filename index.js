@@ -17,6 +17,15 @@ function updateTime() {
 
   dateParis.innerHTML = parisTime.format("MMMM Do YYYY");
   timeParis.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
+
+  let newLisbon = document.querySelector("#lisbon");
+
+  let dateLisbon = newLisbon.querySelector(".date");
+  let timeLisbon = newLisbon.querySelector(".time");
+  let lisbonTime = moment().tz("Europe/Lisbon");
+
+  dateLisbon.innerHTML = lisbonTime.format("MMMM Do YYYY");
+  timeLisbon.innerHTML = lisbonTime.format("h:mm:ss [<small>]A[</small>]");
 }
 setInterval(updateTime, 1000);
 
